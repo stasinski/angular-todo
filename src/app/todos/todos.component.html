@@ -1,0 +1,12 @@
+<ul class="list-group p-5">
+  <li class="list-group-item" *ngFor="let todo of todos; index as i">
+    {{ i + 1 }}.
+    {{ todo.title }}
+    <button (click)="handleSelect(todo.id)" class="btn btn-primary btn-sm mx-1">
+      Edit
+    </button>
+    <button (click)="handleDelete(todo.id)" class="btn btn-danger btn-sm mx-1">
+      Delete
+    </button>
+  </li>
+</ul>
