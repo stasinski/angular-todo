@@ -1,0 +1,12 @@
+<div class="px-5 pt-5 d-flex justify-content-center">
+  <form class="d-flex">
+    <input [(ngModel)]="title" name="title" type="text" />
+    <button
+      type="submit"
+      (click)="handleSubmit($event)"
+      class="btn btn-success mx-1 btn-sm"
+    >
+      Add
+    </button>
+  </form>
+</div>

@@ -3,10 +3,14 @@
 </nav>
 <div class="container">
   <app-edit-todo
-    *ngIf="selectedTodo !== null"
+    *ngIf="selectedTodo !== null; else addBlock"
     [selectedTodo]="selectedTodo"
     (updateTodo)="handleUpdateTodo($event)"
   ></app-edit-todo>
+  <ng-template #addBlock>
+    <app-add-todo (addTodo)="handleAddTodo($event)"></app-add-todo>
+  </ng-template>
+
   <app-todos
     [todos]="todos"
     [error]="error"

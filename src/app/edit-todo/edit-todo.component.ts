@@ -22,7 +22,6 @@ export class EditTodoComponent implements OnInit {
 
   handleSubmit(e: any): void {
     e.preventDefault();
-    console.log('t');
     this.updateTodo.emit({
       id: this.id,
       newTitle: this.title,

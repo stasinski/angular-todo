@@ -6,9 +6,10 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TodosComponent } from './todos/todos.component';
 import { EditTodoComponent } from './edit-todo/edit-todo.component';
+import { AddTodoComponent } from './add-todo/add-todo.component';
 
 @NgModule({
-  declarations: [AppComponent, TodosComponent, EditTodoComponent],
+  declarations: [AppComponent, TodosComponent, EditTodoComponent, AddTodoComponent],
   imports: [BrowserModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

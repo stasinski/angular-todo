@@ -21,7 +21,7 @@ export class AppComponent {
   ngOnInit(): void {
     this._todosService.getTodos().subscribe(
       (data) => {
-        this.todos = data;
+        this.todos = data.slice(0, 10);
       },
       (error: HttpErrorResponse) => {
         this.error = error.message;
@@ -38,6 +38,13 @@ export class AppComponent {
         };
       }
       return todo;
+    });
+  }
+  handleAddTodo(title: string) {
+    this.todos.push({
+      id: Math.floor(Math.random() * 1000000),
+      completed: false,
+      title,
     });
   }
 }
